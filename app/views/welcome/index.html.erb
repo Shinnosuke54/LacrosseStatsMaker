@@ -1,0 +1,22 @@
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <h1>Welcome to View Stats</h1>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    The one and only website to create and view lacrosse stats.
+  </figcaption>
+</figure>
+
+<% if user_signed_in? %>
+<figure class="text-center">
+  <p class='you-are'>You are <%= current_user.email %></p>
+  <a href='/createddates' class="btn btn-outline-dark btn-lg mybtn">STATS</a>
+  <br>
+  <br>
+  <div class="coolurl">
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"coolurl" %>
+  </div>
+  <figure>
+<% else %>
+  <%= link_to 'Login', new_user_session_path %>
+<% end %>

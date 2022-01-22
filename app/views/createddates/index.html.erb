@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Created dates</h1>
+
+<div id="createddates">
+  <% @createddates.each do |createddate| %>
+    <table class='table align-middle'>
+    <thead>
+    <tr class="align-bottom">
+    <th><%= link_to createddate.date, stats_path(:cre => createddate.id), class:'coolurl' %></th>
+    <th class="paragraph">There are <%= createddate.stats.count %> stats</th>
+    <th>
+    <%= link_to "Edit this createddate", edit_createddate_path(createddate),class:"btn mybtn" %>
+    </th>
+  
+    </tr>
+
+    <p>
+      
+    </p>
+    </table>
+    
+  <% end %>
+</div>
+<br>
+<%= link_to "New createddate", new_createddate_path, class:"btn mybtn2" %>

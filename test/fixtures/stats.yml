@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  score: 1
+  shot: 1
+  gb: 1
+  bd: 1
+  pc: 1
+
+two:
+  name: MyString
+  score: 1
+  shot: 1
+  gb: 1
+  bd: 1
+  pc: 1

@@ -1,0 +1,58 @@
+<%@createddate.each do |createddate|%>
+
+<h1>Stats for <%= link_to createddate.date, stats_path(:cre => createddate.id), class:'coolurl' %></h1>
+<%end%>
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Score</th>
+<th>Shot</th>
+<th>GB</th>
+<th>BD</th>
+<th>PC</th>
+
+</tr>
+</thead>
+
+<tbody>
+<% @stats.each do |stat| %>
+
+<tr>
+<td><%= link_to stat.name, edit_stat_path(stat), class:"bigboy" %></td>
+<td>
+<%= form_with model: stat do |f| %>
+<%= f.number_field :score, class:'show_stat'%>
+</td>
+<td>
+<%= f.number_field :shot, class:'show_stat'%>
+</td>
+<td>
+<%= f.number_field :gb, class:'show_stat'%>
+</td>
+<td>
+<%= f.number_field :bd, class:'show_stat'%>
+</td>
+<td>
+<%= f.number_field :pc, class:'show_stat'%>
+</td>
+<td>
+<%= f.submit "update", class:"btn mybtn btn-sm" %>
+</td>
+<%end %>
+
+<%end%>
+</tr>
+</tbody>
+
+<br>
+
+
+<div>
+<%= link_to "New stat", new_stat_path, class:"coolurl" %> |
+<%= link_to "Back to dates list", createddates_url, class:"coolurl" %>
+</div>
+<br>
+
+
+

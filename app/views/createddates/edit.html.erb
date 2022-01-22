@@ -1,0 +1,23 @@
+<div class="container">
+<h1>Edit Created date</h1>
+<%= form_with(model: @createddate, local: true) do |form| %>
+
+<div class="creator">
+    <%= form.label :date, class:'paragraph'%>   
+<br>
+    <%= form.date_field :date %>
+  </div>
+  <br>
+  <div>
+    <%= form.submit class: "btn btn-lg mybtn creatingbtn" %>
+  </div>
+<%end%>
+
+
+<br>
+
+<div>
+  <%= link_to "Show this createddate", @createddate, class:"coolurl" %> |
+  <%= link_to "Back to createddates", createddates_path, class:"coolurl" %>
+</div>
+</div>

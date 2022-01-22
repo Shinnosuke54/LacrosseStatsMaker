@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @createddate %>
+<% @createddates.each do |createddate| %>
+
+<%end%>
+
+<div>
+  <%= link_to "Create new stats", stats_path(:cre => @createddate.id),class:'coolurl' %> |
+  <%= link_to "Edit this createddate", edit_createddate_path(@createddate),class:'coolurl' %> |
+  <%= link_to "Back to createddates", createddates_path,class:'coolurl' %>
+
+  
+</div>
